@@ -1,23 +1,4 @@
-/*
-LER numero
-
-notas100 = numero/100
-numero = numero % 100 (resto)
-notas50 = numero/50
-numero = numero % 50
-notas20 = numero/20
-numero = numero % 20
-notas10 = numero/10
-numero = numero % 10
-notas5 = numero/5
-numero = numero % 5
-notas2 = numero/2
-notas 1 = numero % 2
-
-
-ESCRVER (notas100, notas50...)
-
-*/
+//quant notas
 
 import java.util.Scanner;
 
