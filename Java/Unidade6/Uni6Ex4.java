@@ -31,7 +31,27 @@ public class Uni6Ex4 {
             System.out.println(soma[cont]);
         }
 
-    
+        //print
+
+        // vetor1
+        System.out.println("\nVetor1:");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Posição " + i + ": " + vetor1[i]);
+        }
+
+        // vetor2
+        System.out.println("\nVetor2:");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Posição " + i + ": " + vetor2[i]);
+        }
+
+        // vetor3
+        System.out.println("\nVetor3 (soma):");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Posição " + i + ": " + soma[i]);
+        }
+
+        teclado.close();
     }
     
 }
