@@ -4,21 +4,43 @@ import java.util.Scanner;
 
 public class Uni7Ex9 {
 
-    private int decToBin {
+    public String decToBin (int decimal){
+        // Funcção que recebe decimal e retorna binário
 
-        original = decimal;
-        binario = decimal / 100;
-        decimal = decimal % 100;
-       
+        int numero = decimal;
+        String binario = ""; //Cria variável pro binário
+        //Enquanto não chegar no fim do decimal
+        while (numero > 0) {
+            //Concatenar o resto da divisão do número com o que eu tinha no binário
+            binario = numero % 2 + binario;
+            //Dividir o número para saber o próximo binário
+            numero = numero / 2;
+        }
+
+       return binario;
     }
 
-    private int binToDec {
+    private int binToDec (String binario){
+        // Funcção que recebe binário e retorna decimal
 
+        //Inicializar variáveis
+        int soma = 0;
+        int posicao = 0;
+
+        for (int cont = binario.length() - 1; cont >= 0; cont--){
+
+            if (binario.charAt(posicao) != '0') {
+                //Não somar se for 0, somente 1;
+                soma += Math.pow(2, cont);
+            }
+            posicao++;
+        }
+        return soma;
     }
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        Uni7Ex9 exercicio = Uni7Ex9();
+        Uni7Ex9 exercicio = new Uni7Ex9();
 
         int decimal, opcao;
         String binario;
@@ -42,7 +64,7 @@ public class Uni7Ex9 {
                 
                 case 2:
                     System.out.println("Informe um número binário");
-                    binario = teclado.nextLine();
+                    binario = teclado.next();
                     decimal = exercicio.binToDec (binario);
                     System.out.println("Numero em decimal: " + decimal);
                     break;               
