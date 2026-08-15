@@ -1,7 +1,4 @@
-
-import java.util.Date;
-
 public class Emprestimo {
-    Date dataEmprestimo;
-    Date dataDevolucao;
+    String dataEmprestimo;
+    String dataDevolucao;
 }
