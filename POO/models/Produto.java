@@ -6,4 +6,8 @@ public class Produto {
     int quantEstoque;
     boolean disponivel;
     Fabricante fabricante;
+
+    public double retornarPreco() {
+        return preco;
+    }
 }
