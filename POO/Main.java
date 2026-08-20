@@ -2,282 +2,252 @@ public class Main {
     public static void main(String[] args) {
         
         Pessoa ana = new Pessoa();
-        ana.nome = "Ana";
-        ana.idade = 18;
-        ana.altura = 167;
-        ana.maiorIdade = true;
+        ana.setNome("Ana");
+        ana.setIdade(18);
+        ana.setAltura(167);
+        ana.setMaiorIdade(true);
 
         //Pessoa 2
 
         Pessoa bella = new Pessoa();
-        bella.nome = "Isabella";
-        bella.idade = 19;
-        bella.altura = 178;
-        bella.maiorIdade = true;
+        bella.setNome("Isabella");
+        bella.setIdade(19);
+        bella.setAltura(178);
+        bella.setMaiorIdade(true);
 
         //Pessoa 3
 
         Pessoa valen = new Pessoa();
-        valen.nome = "Valentina";
-        valen.idade = 19;
-        valen.altura = 165;
-        valen.maiorIdade = true;
+        valen.setNome("Valentina");
+        valen.setIdade(19);
+        valen.setAltura(165);
+        valen.setMaiorIdade(true);
 
         //Livro
 
         Livro cleancode = new Livro();
-        cleancode.titulo = "Clean Code";
-        cleancode.autor = ana;
-        cleancode.numeroPaginas = 464;
-        cleancode.anoPublicacao = 2008;
+        cleancode.setTitulo("Clean Code");
+        cleancode.setAutor(ana);
+        cleancode.setNumeroPaginas(464);
+        cleancode.setAnoPublicacao(2008);
 
         Fabricante jorge = new Fabricante();
-        jorge.nome = "Jorge";
+        jorge.setNome("Jorge");
 
         Produto videogame = new Produto();
-        videogame.nome = "Playstation";
-        videogame.comprador = bella;
-        videogame.preco = 399;
-        videogame.quantEstoque = 300;
-        videogame.disponivel = true;
-        videogame.fabricante = jorge;
+        videogame.setNome("Playstation");
+        videogame.setComprador(bella);
+        videogame.setPreco(299);
+        videogame.setQuantEstoque(300);
+        videogame.setDisponivel(true);
+        videogame.setFabricante(jorge);
 
         Produto controle = new Produto();
-        controle.nome = "Playstation";
-        controle.comprador = bella;
-        controle.preco = 150;
-        controle.quantEstoque = 300;
-        controle.disponivel = true;
-        controle.fabricante = jorge;
+        controle.setNome("Controle");
+        controle.setComprador(bella);
+        controle.setPreco(150);
+        controle.setQuantEstoque(300);
+        controle.setDisponivel(true);
+        controle.setFabricante(jorge);
 
         Motor motorBom = new Motor();
-        motorBom.potencia = 10000;
-        motorBom.cilindrada = 30;
-        motorBom.combustivel = "Muito";
+        motorBom.setPotencia(10000);
+        motorBom.setCilindrada(30);
+        motorBom.setCombustivel("Muito");
 
         Carro byd = new Carro();
-        byd.modelo = "Sim";
-        byd.cor = "Preto";
-        byd.dono = bella;
-        byd.motor = motorBom;
-        byd.ano = 2024;
-        byd.ligado = false;
-        byd.quantKm = 15000;
+        byd.setModelo("BYD");
+        byd.setCor("Preto");
+        byd.setDono(bella);
+        byd.setMotor(motorBom);
+        byd.setAno(2024);
+        byd.setLigado(false);
+        byd.setQuantKm(15000);
 
         Carro kicks = new Carro();
-        kicks.modelo = "Nao";
-        kicks.cor = "Azul";
-        kicks.dono = bella;
-        kicks.motor = motorBom;
-        kicks.ano = 2026;
-        kicks.ligado = true;
-        kicks.quantKm = 0;
+        kicks.setModelo("Kicks");
+        kicks.setCor("Azul");
+        kicks.setDono(bella);
+        kicks.setMotor(motorBom);
+        kicks.setAno(2026);
+        kicks.setLigado(true);
+        kicks.setQuantKm(0);
 
         Pessoa carlos = new Pessoa();
-        carlos.nome = "Carlos";
-        carlos.altura = 180;
-        carlos.idade = 20;
-        carlos.maiorIdade = true;
+        carlos.setNome("Carlos");
+        carlos.setAltura(180);
+        carlos.setIdade(20);
+        carlos.setMaiorIdade(true);
 
         Aluno carlinhos = new Aluno();
-        carlinhos.aprovado = true;
-        carlinhos.matricula = 20266666;
-        carlinhos.nota = 10;
-        carlinhos.pessoas = carlos;
+        carlinhos.setAprovado(true);
+        carlinhos.setMatricula(2026666);
+        carlinhos.setNota(10);
 
         Pessoa maria = new Pessoa();
-        maria.nome = "Maria";
-        maria.altura = 170;
-        maria.idade = 17;
-        maria.maiorIdade = false;
+        maria.setNome("Maria");
+        maria.setAltura(170);
+        maria.setIdade(17);
+        maria.setMaiorIdade(false);
 
         Livro favorito = new Livro();
-        favorito.titulo = "A Menina Que Roubava Livros";
-        favorito.autor = maria;
-        favorito.numeroPaginas = 480;
-        favorito.anoPublicacao = 2005;
+        favorito.setTitulo("A Menina Que Roubava Livros");
+        favorito.setAutor(maria);
+        favorito.setNumeroPaginas(480);
+        favorito.setAnoPublicacao(2005);
 
         Pessoa joao = new Pessoa();
-        carlos.nome = "João";
-        carlos.altura = 195;
-        carlos.idade = 34;
-        carlos.maiorIdade = true;
+        carlos.setNome("João");
+        carlos.setAltura(190);
+        carlos.setIdade(34);
+        carlos.setMaiorIdade(true);
 
 
         Pessoa gisele = new Pessoa();
-        gisele.nome = "Gisele";
-        gisele.altura = 160;
-        gisele.idade = 46;
-        gisele.maiorIdade = true;
+        gisele.setNome("Gisele");
+        gisele.setAltura(160);
+        gisele.setIdade(46);
+        gisele.setMaiorIdade(true);
 
         Pessoa larissa = new Pessoa();
-        larissa.nome = "Larissa";
-        larissa.altura = 170;
-        larissa.idade = 25;
-        larissa.maiorIdade = true;
+        larissa.setNome("Larissa");
+        larissa.setAltura(169);
+        larissa.setIdade(25);
+        larissa.setMaiorIdade(true);
 
         Produto fone = new Produto();
-        fone.nome = "Fone de Ouvido Razer";
-        fone.comprador = gisele;
-        fone.preco = 4500;
-        fone.quantEstoque = 8;
-        fone.disponivel = true;
-        fone.fabricante = jorge;
+        fone.setNome("Fone de Ouvido Razer");
+        fone.setComprador(gisele);
+        fone.setPreco(4500);
+        fone.setQuantEstoque(8);
+        fone.setDisponivel(true);
+        fone.setFabricante(jorge);
 
         Produto teclado = new Produto();
-        teclado.nome = "Teclado Gamer";
-        teclado.comprador = gisele;
-        teclado.preco = 4500;
-        teclado.quantEstoque = 8;
-        teclado.disponivel = true;
-        teclado.fabricante = jorge;
+        teclado.setNome("Teclado Gamer");
+        teclado.setComprador(gisele);
+        teclado.setPreco(45000);
+        teclado.setQuantEstoque(8);
+        teclado.setDisponivel(true);
+        teclado.setFabricante(jorge);
 
         Produto monitor = new Produto();
-        monitor.nome = "Monitor Curvado";
-        monitor.comprador = larissa;
-        monitor.preco = 4500;
-        monitor.quantEstoque = 8;
-        monitor.disponivel = true;
-        monitor.fabricante = jorge;
+        monitor.setNome("Monitor Curvado");
+        monitor.setComprador(larissa);
+        monitor.setPreco(45000);
+        monitor.setQuantEstoque(8);
+        monitor.setDisponivel(true);
+        monitor.setFabricante(jorge);
 
         Pessoa roberto = new Pessoa();
-        roberto.nome = "Roberto";
-        roberto.altura = 150;
-        roberto.idade = 45;
-        roberto.maiorIdade = true;
-
+        roberto.setNome("Roberto");
+        roberto.setAltura(150);
+        roberto.setIdade(45);
+        roberto.setMaiorIdade(true);
 
         Fabricante dell = new Fabricante();
-        dell.nome = "Dell";
-        dell.pais = "Estragos Undios";
+        dell.setNome("Dell");
+        dell.setPais("Estados Unidos");
 
         Produto notebook = new Produto();
-        notebook.nome = "Notebook";
-        notebook.comprador = joao;
-        notebook.preco = 4500;
-        notebook.quantEstoque = 8;
-        notebook.disponivel = true;
-        notebook.fabricante = dell;
+        notebook.setNome("Notebook");
+        notebook.setComprador(joao);
+        notebook.setPreco(5000);
+        notebook.setQuantEstoque(10);
+        notebook.setDisponivel(true);
+        notebook.setFabricante(dell);
 
         Fabricante xiaomi = new Fabricante();
-        xiaomi.nome = "Xiaomi";
-        xiaomi.pais = "China";
+        xiaomi.setNome("Xiaomi");
+        xiaomi.setPais("China");
 
         Fabricante mago = new Fabricante();
-        mago.nome = "Merlin";
-        mago.pais = "Reino Unido";
+        mago.setNome("Merlin");
+        mago.setPais("Reino Unido");
 
         Produto cajado = new Produto();
-        cajado.nome = "Cajado";
-        cajado.comprador = bella;
-        cajado.preco = 10000;
-        cajado.quantEstoque = 3;
-        cajado.disponivel = true;
-        cajado.fabricante = mago;
+        notebook.setNome("Cajado");
+        notebook.setComprador(bella);
+        notebook.setPreco(10000);
+        notebook.setQuantEstoque(3);
+        notebook.setDisponivel(true);
+        notebook.setFabricante(mago);
 
         Produto pocao = new Produto();
-        pocao.nome = "Poção";
-        pocao.comprador = larissa;
-        pocao.preco = 100;
-        pocao.quantEstoque = 50;
-        pocao.disponivel = true;
-        pocao.fabricante = mago;
+        notebook.setNome("Poção");
+        notebook.setComprador(larissa);
+        notebook.setPreco(100);
+        notebook.setQuantEstoque(50);
+        notebook.setDisponivel(true);
+        notebook.setFabricante(mago);
 
         Produto cobre = new Produto();
-        cobre.nome = "Cobre";
-        cobre.comprador = joao;
-        cobre.preco = 500;
-        cobre.quantEstoque = 4000;
-        cobre.disponivel = true;
-        cobre.fabricante = xiaomi;
+        notebook.setNome("Cobre");
+        notebook.setComprador(joao);
+        notebook.setPreco(500);
+        notebook.setQuantEstoque(4000);
+        notebook.setDisponivel(true);
+        notebook.setFabricante(xiaomi);
 
         Motor basico = new Motor();
-        basico.cilindrada = 1.3;
-        basico.combustivel = "Gasolina";
-        basico.potencia = 150;
+        basico.setCilindrada(1.3);
+        basico.setCombustivel("Gasolina");
+        basico.setPotencia(150);
 
         Carro fusca = new Carro();
-        fusca.modelo = "Fusca";
-        fusca.cor = "Azul";
-        fusca.dono = roberto;
-        fusca.ano = 1982;
-        fusca.quantKm = 15000;
-        fusca.motor = basico;
+        fusca.setModelo("Fusca");
+        fusca.setCor("Azul");
+        fusca.setDono(roberto);
+        fusca.setAno(1982);
+        fusca.setQuantKm(15000);
+        fusca.setMotor(basico);
 
         Departamento ti = new Departamento();
-        ti.nome = "Tecnologia";
-        ti.sigla = "TI";
+        ti.setNome("Tecnologia");
+        ti.setSigla("TI");
 
         Funcionario estagiario = new Funcionario();
-        estagiario.cargo = "Desenvolvedor";
-        estagiario.departamento = ti;
-        estagiario.nome = joao;
-        estagiario.salario = 5000;
-        ti.funcionario = estagiario;
+        estagiario.setCargo("Desenvolvedor");
+        estagiario.setDepartamento(ti);
+        estagiario.setNome(joao);
+        estagiario.setSalario(5000);
+        ti.setFuncionario(estagiario);
 
         Departamento financeiro = new Departamento();
-        financeiro.nome = "Financeiro";
-        financeiro.sigla = "FI";
+        ti.setNome("Financeiro");
+        ti.setSigla("FI");
 
         Funcionario senior = new Funcionario();
-        senior.cargo = "Contadora";
-        senior.departamento = financeiro;
-        senior.nome = larissa;
-        senior.salario = 1200;
+        estagiario.setCargo("Contadora");
+        estagiario.setDepartamento(financeiro);
+        estagiario.setNome(larissa);
+        estagiario.setSalario(1200);
 
         Funcionario pleno = new Funcionario();
-        pleno.cargo = "Estagiario";
-        pleno.departamento = financeiro;
-        pleno.nome = ana;
-        pleno.salario = 3000;
+        estagiario.setCargo("Estagiario");
+        estagiario.setDepartamento(financeiro);
+        estagiario.setNome(ana);
+        estagiario.setSalario(3000);
 
         Funcionario junior = new Funcionario();
-        junior.cargo = "Tesoureira";
-        junior.departamento = financeiro;
-        junior.nome = valen;
-        junior.salario = 10000;
-
-        Pessoa pedro = new Pessoa();
-        pedro.nome = "Pedro";
+        estagiario.setCargo("Tesoureira");
+        estagiario.setDepartamento(financeiro);
+        estagiario.setNome(valen);
+        estagiario.setSalario(10000);
 
 
         Item chaveiro = new Item();
-        chaveiro.produto = "brinde";
-        chaveiro.quantidade = 3;
+        chaveiro.setProduto("brinde");
+        chaveiro.setQuantidade(3);
 
         Pedido especial = new Pedido();
-        especial.pedido = chaveiro;
-        especial.pessoa = valen;
+        especial.setPedido(chaveiro);
+        especial.setPessoa(valen);
 
         Emprestimo amqrl = new Emprestimo();
-        amqrl.dataDevolucao = "2026-08-20";
-        amqrl.dataEmprestimo = "2026-07-20";
+        amqrl.setDataDevolucao("2026-08-20");
+        amqrl.setDataEmprestimo("2026-07-20");
 
-        Biblioteca magica = new Biblioteca();
-        
-        /*
-        String nome;
-    String sigla;
-    Funcionario funcionario;
-        */
-
-
-        /*
-        Pessoa[] pessoas;
-    int matricula;
-    double nota;
-    boolean aprovado; */
-    
-
-        /*
-        String nome;
-    int idade;
-    double altura;
-    boolean maiorIdade;
-        */
-
-
-      
 
     }
 }
