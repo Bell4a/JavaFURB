@@ -2,10 +2,10 @@
 public class Pessoa {
 
     //objetos
-    String nome;
-    int idade;
-    double altura;
-    boolean maiorIdade;
+    private String nome;
+    private int idade;
+    private double altura;
+    private boolean maiorIdade;
 
     public String obterNome() {
         return nome;
@@ -34,11 +34,37 @@ public class Pessoa {
         int soma = idade + 1;
         return soma;
     }
- 
-    public void inserirNome(String nome) {
-        if (nome.contains(s: "01")) {
-            System.out.println("Nome inválido");
-        }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public boolean isMaiorIdade() {
+        return maiorIdade;
+    }
+
+    public void setMaiorIdade(boolean maiorIdade) {
+        this.maiorIdade = maiorIdade;
+    }
+ 
 }
