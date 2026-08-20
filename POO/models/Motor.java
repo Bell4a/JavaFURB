@@ -1,6 +1,24 @@
 public class Motor {
     
-    int potencia;
-    double cilindrada;
-    String combustivel;
+    private int potencia;
+    private double cilindrada;
+    private String combustivel;
+    public int getPotencia() {
+        return potencia;
+    }
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
+    }
+    public double getCilindrada() {
+        return cilindrada;
+    }
+    public void setCilindrada(double cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+    public String getCombustivel() {
+        return combustivel;
+    }
+    public void setCombustivel(String combustivel) {
+        this.combustivel = combustivel;
+    }
 }
