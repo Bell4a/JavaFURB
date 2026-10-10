@@ -1,0 +1,8 @@
+package models;
+
+public abstract class Animal {
+    protected String nome;
+    protected int idade;
+    
+    public abstract String emitirSom();
+}
