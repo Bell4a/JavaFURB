@@ -2,9 +2,7 @@ package models;
 
 public interface Ativo {
     
-    public double calcularRendimento(double porcentagem);
+    public double calcularRendimento();
 
-    public double calcularValorInvestido(double valor);
-
-
+    public double calcularValorInvestido();
 }
