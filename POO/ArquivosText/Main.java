@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import models.*;
 import repositorio.*;
 
 public class Main {
@@ -30,5 +33,26 @@ public class Main {
 
         ArquivoBinario arquivo8 = new ArquivoBinario();
         arquivo8.gravarEmpresa("relatorio.bin", "Empresa1", 50000, 10000000, true, 1950);
+
+        ArrayList<Pessoa> pessoas = new ArrayList<>();
+        for (var i = 0; i < 3; i++) {
+        Pessoa pessoa = new Pessoa();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Digite o nome: ");
+            pessoa.setNome(scanner.nextLine());
+            System.out.println("Digite a Idade: ");
+            pessoa.setIdade(scanner.nextInt());
+            pessoas.add(pessoa);
+        }
+
+        ArquivoBinario arquivo9 = new ArquivoBinario();
+        arquivo9.salvar(pessoas, "pessoa.bin");
+        ArrayList<Pessoa> pessoa2 = arquivo9.carregar("pessoas.bin");
+        for (Pessoa p : pessoa2) {
+            System.out.println("Nome: " + p.getNome());
+            System.out.println("Idade: " + p.getIdade());
+        }
+
+
     }
 }
