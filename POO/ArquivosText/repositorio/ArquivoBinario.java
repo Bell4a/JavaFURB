@@ -4,6 +4,10 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import models.Pessoa;
 
 public class ArquivoBinario {
     
@@ -60,6 +64,7 @@ public class ArquivoBinario {
             while ((conteudo = input.read()) != -1) {
                 output.write(conteudo);
             }
+            input.close();
             output.close();
 
         } catch (Exception e) {
@@ -97,6 +102,8 @@ public class ArquivoBinario {
             dos.writeDouble(salario);
             dos.writeBoolean(funcionarioAtivo);
             dos.writeUTF(nome);
+            fos.close();
+            dos.close();
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,6 +118,8 @@ public class ArquivoBinario {
             dos.writeInt(codigo);
             dos.writeUTF(nome);
             dos.writeDouble(preco);
+            fos.close();
+            dos.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -126,8 +135,38 @@ public class ArquivoBinario {
             dos.writeDouble(faturamento);
             dos.writeBoolean(funcionamento);
             dos.writeInt(fundacao);
+            fos.close();
+            dos.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void salvar(ArrayList<Pessoa> pessoa, String path) {
+        File file = new File(path);
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(pessoa);
+            oos.close();
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ArrayList<Pessoa> carregar(String path) {
+        File file = new File(path);
+        ArrayList<Pessoa> pessoa = null;
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            pessoa = (ArrayList<Pessoa>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return pessoa;
     }
 }
