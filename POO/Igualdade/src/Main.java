@@ -1,6 +1,6 @@
-import models.*;
 import java.util.ArrayList;
 import java.util.List;
+import models.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,23 +12,23 @@ public class Main {
         System.out.println("p1.equals(p2) (código igual): " + p1.equals(p2));
 
         System.out.println("\n=== EXERCÍCIO 2: ALUNOS ==[cite: 2]");
-        AlunoEx2 alEx2_1 = new AlunoEx2(20261, "Isabella", "Data Science");
-        AlunoEx2 alEx2_2 = new AlunoEx2(20261, "Isabella Mondini", "Engenharia de Software");
-        AlunoEx2 alEx2_3 = new AlunoEx2(20262, "Lucas", "Sistemas");
+        Aluno alEx2_1 = new Aluno(20261, "Isabella", "Data Science");
+        Aluno alEx2_2 = new Aluno(20261, "Isabella Mondini", "Engenharia de Software");
+        Aluno alEx2_3 = new Aluno(20262, "Lucas", "Sistemas");
 
         System.out.println("alEx2_1.equals(alEx2_2): " + alEx2_1.equals(alEx2_2));
         System.out.println("alEx2_1.equals(alEx2_3): " + alEx2_1.equals(alEx2_3));
 
-        List<AlunoEx2> listaAlunos = new ArrayList<>();
+        List<Aluno> listaAlunos = new ArrayList<>();
         listaAlunos.add(alEx2_1);
         listaAlunos.add(alEx2_3);
 
-        AlunoEx2 alunoBusca = new AlunoEx2(20261, "Qualquer", "Outro");
+        Aluno alunoBusca = new Aluno(20261, "Qualquer", "Outro");
         System.out.println("A lista contém o aluno com matrícula 20261? " + listaAlunos.contains(alunoBusca));
 
         System.out.println("\n=== EXERCÍCIO 3: PESSOAS (HERANÇA) ==[cite: 3]");
-        AlunoEx3 a3_1 = new AlunoEx3("123.456.789-00", "Mariana", 1001);
-        AlunoEx3 a3_2 = new AlunoEx3("123.456.789-00", "Mariana Souza", 1002);
+        AlunoSub a3_1 = new AlunoSub("123.456.789-00", "Mariana", 1001);
+        AlunoSub a3_2 = new AlunoSub("123.456.789-00", "Mariana Souza", 1002);
         Professor prof1 = new Professor("987.654.321-11", "Carlos", "Banco de Dados");
         Professor prof2 = new Professor("987.654.321-11", "Carlos Eduardo", "Estatística");
 
